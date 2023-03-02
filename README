@@ -1,0 +1,23 @@
+Wiki Page: http://wiki.docking.org/index.php/Docking_Analysis_in_DOCK3.8
+
+========================================================================
+
+INSTALLING PYTHON 3.8
+
+To run the top_poses.py script, you must include a link to a working python3.8 executable.
+On Wynton Python 3.8 is installed @ /wynton/group/bks/soft/python-versions/python-3.8-install
+
+How to install from source:
+
+wget https://www.python.org/ftp/python/3.8.8/Python-3.8.8.tgz
+tar -xzf Python-3.8.8.tgz
+cd Python-3.8.8
+./configure --prefix=<full path to wherever you want python to be installed>
+
+If you are installing to wynton, you must log into a dev node before all this, otherwise the necessary libraries won't be available.
+
+Now in the top_poses directory:
+
+ln -s <python install directory>/bin/python3.8 python3.8
+
+And you are good to go!
