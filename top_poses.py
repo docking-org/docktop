@@ -410,8 +410,11 @@ def posedata_producer(processing_queue, filenames_queue, done_event, ppid, verbo
             posesfile = filenames_queue.get(True, timeout=1)
         except:
             break
-            
-        with gzip.open(posesfile, 'rt') as poses_reader:
+        if posesfile.endswith('.gz')
+            poses_reader = gzip.open(posesfile, 'rt')
+        else:
+            poses_reader = open(posesfile, 'r')
+        with poses_reader:
             buff = ""
             enrg = 99999
             if verbose: 
