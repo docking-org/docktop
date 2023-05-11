@@ -410,7 +410,7 @@ def posedata_producer(processing_queue, filenames_queue, done_event, ppid, verbo
             posesfile = filenames_queue.get(True, timeout=1)
         except:
             break
-        if posesfile.endswith('.gz')
+        if posesfile.endswith('.gz'):
             poses_reader = gzip.open(posesfile, 'rt')
         else:
             poses_reader = open(posesfile, 'r')
