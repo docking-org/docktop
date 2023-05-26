@@ -599,7 +599,7 @@ for process in posedata_producer_pool:
 
 print("done processing! writing out...")
 
-data_index = sorted([(i, heap.heap[i][1]) for i in range(1, heap.size)], key=lambda m:m[1])
+data_index = sorted([(i, heap.heap[i][1]) for i in range(1, heap.size+1)], key=lambda m:m[1])
 mol2_sorted = [Mol2Data(heap.heap[d_idx[0]][0]) for d_idx in data_index]
 
 with gzip.open(output_file, 'w') as outfile:
